@@ -1,0 +1,11 @@
+users-manual
+expectations
+prerequisites-and-further-reading
+styles-and-fonts
+an-introduction-to-r
+the-bayess-package
+normal-models
+normal-modeling
+the-bayesian-toolkit
+posterior-distribution
+bayesian-estimates

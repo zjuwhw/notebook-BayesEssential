@@ -1,0 +1,11 @@
+# User's Manual
+
+## Expectations
+
+## Prerequisites and Further reading
+
+## Styles and Fonts
+
+## An introduction to R
+
+## The bayess package

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Normal Models | _main.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Normal Models | _main.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Normal Models | _main.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="users-manual.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Notebook for Bayesian Essential with R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="users-manual.html"><a href="users-manual.html"><i class="fa fa-check"></i><b>1</b> User’s Manual</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="users-manual.html"><a href="users-manual.html#expectations"><i class="fa fa-check"></i><b>1.1</b> Expectations</a></li>
+<li class="chapter" data-level="1.2" data-path="users-manual.html"><a href="users-manual.html#prerequisites-and-further-reading"><i class="fa fa-check"></i><b>1.2</b> Prerequisites and Further reading</a></li>
+<li class="chapter" data-level="1.3" data-path="users-manual.html"><a href="users-manual.html#styles-and-fonts"><i class="fa fa-check"></i><b>1.3</b> Styles and Fonts</a></li>
+<li class="chapter" data-level="1.4" data-path="users-manual.html"><a href="users-manual.html#an-introduction-to-r"><i class="fa fa-check"></i><b>1.4</b> An introduction to R</a></li>
+<li class="chapter" data-level="1.5" data-path="users-manual.html"><a href="users-manual.html#the-bayess-package"><i class="fa fa-check"></i><b>1.5</b> The bayess package</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="normal-models.html"><a href="normal-models.html"><i class="fa fa-check"></i><b>2</b> Normal Models</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="normal-models.html"><a href="normal-models.html#normal-modeling"><i class="fa fa-check"></i><b>2.1</b> Normal Modeling</a></li>
+<li class="chapter" data-level="2.2" data-path="normal-models.html"><a href="normal-models.html#the-bayesian-toolkit"><i class="fa fa-check"></i><b>2.2</b> The Bayesian Toolkit</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="normal-models.html"><a href="normal-models.html#posterior-distribution"><i class="fa fa-check"></i><b>2.2.1</b> Posterior Distribution</a></li>
+<li class="chapter" data-level="2.2.2" data-path="normal-models.html"><a href="normal-models.html#bayesian-estimates"><i class="fa fa-check"></i><b>2.2.2</b> Bayesian Estimates</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+Published with <a href="https://github.com/rstudio/bookdown" target="blank">bookdown</a> by <a href="http://zjuwhw.github.io/" target="blank">zjuwhw</a>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="normal-models" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Normal Models<a href="normal-models.html#normal-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="normal-modeling" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Normal Modeling<a href="normal-models.html#normal-modeling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="the-bayesian-toolkit" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> The Bayesian Toolkit<a href="normal-models.html#the-bayesian-toolkit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="posterior-distribution" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Posterior Distribution<a href="normal-models.html#posterior-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Given an iid (independent and identically distributed) sample <span class="math inline">\(\mathcal{D}_n = (x_1, ..., x_n)\)</span> from a density <span class="math inline">\(f(x|\theta)\)</span> conditional on an unknown parameter <span class="math inline">\(\theta \in \Theta\)</span>, the <em>likelihood function</em> is</p>
+<p><span class="math display">\[\mathcal{l}(\theta|\mathcal{D}_n)=\prod_{i=1}^{n}f(x_i|\theta)\]</span></p>
+<p>For example, a sample of size n from a normal <span class="math inline">\(\mathcal{N}(\mu,\sigma^2)\)</span>, so the unknown parameter <span class="math inline">\(\theta=(\mu,\sigma^2)\)</span>, the likelihood function is</p>
+<p><span class="math display">\[\mathcal{l}(\theta|\mathcal{D}_n)=\prod_{i=1}^{n}\frac{exp[-(x_i-\mu)^2/2\sigma^2]}{\sqrt{2\pi \sigma}}\]</span></p>
+<p><span class="math display">\[\propto \frac{exp[-\sum_{i=1}(x_i-\mu)^2/2\sigma^2]}{\sigma^{n}}\]</span></p>
+<p><span class="math display">\[\propto \frac{exp[-(n(\mu-\bar{x})^2+s^2)/2\sigma^2]}{\sigma^n}\]</span></p>
+<p>, where</p>
+<ul>
+<li><span class="math inline">\(\propto\)</span>: means “proportional to”</li>
+<li><span class="math inline">\(\bar{x}\)</span>: the empirical mean</li>
+<li><span class="math inline">\(s^2\)</span> is the sum <span class="math inline">\(\sum_{i=1}^n(x_i-\bar{x})^2\)</span></li>
+</ul>
+<p>That <span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(s^2\)</span> are sufficient statistics</p>
+<p>Bayesian approach modifies the likelihood function into a <em>posterior distribution</em> by the classical Bayes’ formula
+(or theorem)</p>
+<p><span class="math display">\[\pi(\theta|\mathcal{D}_n)=\frac{l(\theta|\mathcal{D}_n)\pi(\theta)}{\int l(\theta|\mathcal{D}_n)\pi(\theta) d(\theta)}\]</span></p>
+<p>, where the factor <span class="math inline">\(\pi(\theta)\)</span> is called the <em>prior</em></p>
+<ul>
+<li>first motivation: prior distribution summarizes the prior information (knowledge) on <span class="math inline">\(\theta\)</span>. However, the choice of <span class="math inline">\(\pi(\theta)\)</span> is often decided on practical grounds rather than strong subjective beliefs or overwhelming prior information</li>
+<li>second motivation: provide a fully probabilistic framework for the inferential analysis</li>
+</ul>
+<p>The simplest case of normal distribution with known variable, <span class="math inline">\(\mathcal{N}(\mu, \sigma^2)\)</span>. If the prior distribution on <span class="math inline">\(\mu\)</span> is the normal <span class="math inline">\(\mathcal{N}(0,\sigma^2)\)</span>, the posterior distribution is</p>
+<p><span class="math display">\[\pi(\mu|\mathcal{D}_n) \propto \pi(\mu)\mathcal{l}(\theta|\mathcal{D}_n)\]</span></p>
+<p><span class="math display">\[\propto exp[-\mu^2/2\sigma^2] exp[-n(\bar{x}-\mu)^2/2\sigma^2]\]</span></p>
+<p><span class="math display">\[\propto exp[-(n+1)(\mu-n\bar{x}/(n+1))^2/2\sigma^2]\]</span></p>
+<p>, which means that this posterior distribution on <span class="math inline">\(\mu\)</span> is a normal distribution with mean <span class="math inline">\(n\bar{x}/(n+1)\)</span> and variance <span class="math inline">\(\sigma^2/(n+1)\)</span>.</p>
+<p>The mean of the posterior is different from the classical estimator <span class="math inline">\(\bar{x}\)</span> is due to the prior information that <span class="math inline">\(\mu\)</span> is close enough to zero is taken into account by the posterior distribution, which thus shrinks the original estimate towards zero.</p>
+<p>Now assume the <span class="math inline">\(\sigma^2\)</span> is unknown, so we have to introduce a further prior distribution on <span class="math inline">\(\sigma^2\)</span>. Assume <span class="math inline">\(1/sigma^2\)</span> follows a exponential distribution <span class="math inline">\(\mathcal{E}(1)\)</span>. The prior distribution on <span class="math inline">\(\sigma^2\)</span> is</p>
+<p><span class="math display">\[\pi(\sigma^2) = exp(-\sigma^{-2})|\frac{d\sigma^{-2}}{d\sigma^2}|=exp(-\sigma^{-2})(\sigma^2)^{-2}\]</span>
+(Note: see “Theorem 2.1.5” in the “Casella and Berger”), which is a special case of an inverse gamma distriubtion, namely <span class="math inline">\(\mathcal{IG}(1,1)\)</span>.</p>
+<p>The corresponding posterior density on <span class="math inline">\(\theta\)</span> is then given by</p>
+<p><span class="math display">\[\pi((\mu, \sigma^2)|\mathcal{D}_n) \propto \pi(\sigma^2)\pi(\mu|\sigma^2)\mathcal{l}((\mu,\sigma^2)|\mathcal{D}_n)\]</span></p>
+<p><span class="math display">\[\propto (\sigma^2)^{-1/2}e^{-(n+1)[\mu-n\bar{x}/(n+1)]^2/2\sigma^2} \times (\sigma^2)^{-(n+2)/2-1}e^{-(2+s^2)/2\sigma^2}\]</span></p>
+<p>So, the posterior on <span class="math inline">\(\theta\)</span> is a product of <span class="math inline">\(\mathcal{IG}((n+2)/2,(2+s^2)/2)\)</span> (an inverse gamma distribution on <span class="math inline">\(\sigma^2\)</span>) and <span class="math inline">\(\mathcal{N}(n\bar{x}/(n+1),\sigma^2/(n+1))\)</span> (a normal distribution on <span class="math inline">\(\mu\)</span> conditionally on <span class="math inline">\(\sigma^2\)</span>)</p>
+<p>The marginal posterior in <span class="math inline">\(\mu\)</span> is then a student’s t distribution</p>
+<p><span class="math display">\[\mu|\mathcal{D}_n \sim \mathcal{T}(n+2, n\bar{x}/(n+1), (2+s^2)/(n+1)(n+2))\]</span></p>
+<p>with <span class="math inline">\(n+2\)</span> degrees of freedom, a location parameter proportional to <span class="math inline">\(\bar{x}\)</span> and a scale parameter (almost) proportional to s.</p>
+</div>
+<div id="bayesian-estimates" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Bayesian Estimates<a href="normal-models.html#bayesian-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="users-manual.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
